@@ -1,0 +1,9 @@
+python introspect/train_bert_te.py
+python introspect/create_sentences_dataset.py
+python introspect/train_bert_te_refinetune.py
+python introspect/infer_relations.py
+python introspect/add_question_ids_to_introspect.py
+python introspect/add_rels_to_introspect.py
+python introspect/remove_duplicates.py
+python introspect/curate_introspect.py
+python introspect/create_answer_dict.py
