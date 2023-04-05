@@ -1,0 +1,27 @@
+# path definitions
+output: logs/lxmert/snap/vqa
+path_vqa_data: ./data/lxmert/data/introspect
+path_image_features: ./data/mscoco_imgfeat
+
+# what to train on
+train: train
+valid: val
+pairs: True
+tiny: False
+cnst_fcn: fcn3
+gain: 0.00007
+start_loss_from_epoch: 0
+infer_with: BEST # BEST or LAST
+
+# model properties
+llayers: 9
+xlayers: 5
+rlayers: 5
+
+# training hyperparameters
+batch_size: 16 # hast to be 1/2 of normal batch because pairs = True
+optim: bert
+lr: 0.00005
+epochs: 5
+seed: 0
+tqdm: True
