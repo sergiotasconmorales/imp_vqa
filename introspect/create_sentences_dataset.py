@@ -1,10 +1,11 @@
 import sys
-sys.path.append('../')
+import os
+sys.path.insert(0,'.')
 
 from bert.dataset.dataset import SentencesDataset
 
-path_introspect = '../data/vqaintrospect'
-path_output = '../data/sentences_dataset'
+path_introspect = './data/vqaintrospect'
+path_output = './data/sentences_dataset'
 
 sentences_dataset = SentencesDataset(path_introspect, path_output, base_filename = 'VQAIntrospect_<>_withidv1.0.json', pos_tag_engine = 'stanza')
 # first, add ids to introspect dataset
