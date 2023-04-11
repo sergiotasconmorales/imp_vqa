@@ -1,6 +1,6 @@
 # path definitions
 output: logs/lxmert/snap/vqa
-path_vqa_data: ./data/introspect_rels
+path_vqa_data: ./data/lxmert/data/introspect
 path_image_features: ./data/mscoco_imgfeat
 
 # what to train on
