@@ -1,3 +1,9 @@
 stanza
 nltk
 transformers
+pandas
+typing_extensions
+packaging
+requests
+PyYAML
+regex

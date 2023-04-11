@@ -4,7 +4,8 @@ This is the official repository of the paper "Logical Implications for Visual Qu
 
 Our method encourages a VQA model to be more consistent (i.e., less self-contradictory), by including logical relations between pairs of question-answers into the training process, and using a special loss function to reduce the number of inconsistencies. 
 
-Repo progress
+
+🔥 Repo in progress. Errors are expected 🔥
 - [x] Data download and VQA-Introspect data preparation
 - [x] Training of LXMERT on VQA-Introspect
 - [x] Consistency measurement for LXMERT results
@@ -27,7 +28,9 @@ We used the VQA-Introspect and DME-VQA datasets to test our method. You can down
  ┣ **📂introspect_rels**\
  ┗ **📂mscoco_imgfeat** 
 
-Optionally, you can follow the following steps to prepare the VQA-Introspect dataset yourself. <mark>If you downloaded the data from the previous links, ignore the next section (Data preparation).</mark>
+Optionally, you can follow the following steps to prepare the VQA-Introspect dataset yourself. 
+
+⚠️ **IMPORTANT: If you downloaded the data from the previous links, ignore the next section (Data preparation).**
 
 ### Data preparation
 
