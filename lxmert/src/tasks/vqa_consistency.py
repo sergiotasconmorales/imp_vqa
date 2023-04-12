@@ -68,7 +68,7 @@ def get_ans(dict_labels):
 i_exp = args.case
 
 path_pred = './logs/lxmert/snap/vqa/config_{}'.format(str(i_exp))
-path_qa = '.data/lxmert/data/introspect'
+path_qa = './data/lxmert/data/introspect'
 dummy = False #! True if checking random flip
 
 if dummy:
