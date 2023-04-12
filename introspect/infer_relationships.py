@@ -1,6 +1,9 @@
 # Script to use re-finetuned model to predict the relationships in the remaining part of Introspect sentences that was not used for 
 # the re-finetuning of the NLP model. 
 
+import sys
+sys.path.insert(0,'.')
+
 import pandas as pd
 import re
 import torch
