@@ -103,20 +103,23 @@ The final prepared VQA-Introspect data can now be found in the folder `.data/lxm
 
 ## Training
 
-To train LXMERT, run
+To train LXMERT and then do inference on the validation set, run
 
+        python lxmert/src/tasks/vqa.py --path_config config/config_XX.yaml
         python lxmert/src/tasks/vqa.py --path_config config/config_XX.yaml --test val
 
-where XX should be replaced with "base" or "ours" for no consistency enhancement (i.e., $\lambda=0$) or our method, respectively. In the yaml config files you can configure the different parameters of the model and of the training process.
+where XX should be replaced with `base` or `ours` for no consistency enhancement (i.e., $\lambda=0$) or our method, respectively. In the yaml config files you can configure the different parameters of the model and of the training process.
 
-The log file will contain the maximum reached validation accuracy.
+The log file log.log (`.logs/lxmert/snap/vqa/config_XX`) will contain the maximum reached validation accuracy. This folder also contains the weights for the last and best model. 
 
 ---
 ## Computing consistency
 
 To measure consistency for a particular set of predictions (base or ours), run the following
 
-        python lxmert/src/tasks/vqa_consistency.py
+        python lxmert/src/tasks/vqa_consistency.py --case XX
+
+where XX should be replaced with `base` or `ours` for no consistency enhancement (i.e., $\lambda=0$) or our method, respectively.
 
 ---
 
