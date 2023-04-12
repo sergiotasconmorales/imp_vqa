@@ -72,6 +72,7 @@ def train(epochs, device, model, train_loader, val_loader, optimizer, path_save)
             'val_loss': val_loss,
             }, jp(path_save, 'best_model.pt'))
         best_acc_val = val_acc
+        print('Best model saved at', jp(path_save, 'best_model.pt'))
     end = time.time()
     hours, rem = divmod(end-start, 3600)
     minutes, seconds = divmod(rem, 60)

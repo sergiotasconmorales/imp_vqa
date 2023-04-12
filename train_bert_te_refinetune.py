@@ -27,6 +27,7 @@ path_data = './data/{}_{}.0'.format(dataset_name, str(version))
 path_model_save = './models/bert_te_refinetune/{}'.format(dataset_name)
 if not os.path.exists(path_model_save): # make sure folder exists to save final model
     os.makedirs(path_model_save, exist_ok=True)
+    print('Folder created: {}'.format(path_model_save))
 
 # declare device
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
