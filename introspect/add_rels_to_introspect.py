@@ -3,11 +3,11 @@ import json
 from tqdm import tqdm
 from os.path import join as jp
 
-path_rels_annotated  = '../data/introspectnli_2.0' # sentence pairs that were annotated manually
+path_rels_annotated  = './data/introspectnli_2.0' # sentence pairs that were annotated manually
 basename_rels_annnotated = '{}_sentence_pairs_relationships_withid.json'
-path_rels_predicted = '../data/sentences_dataset'
+path_rels_predicted = './data/sentences_dataset'
 basename_rels_predicted = '{}_predicted_relationships.json'
-path_introspect = '../data/vqaintrospect'
+path_introspect = './data/vqaintrospect'
 basename_introspect = 'VQAIntrospect_{}_withidv1.0.json'
 
 subsets = ['train', 'val']
