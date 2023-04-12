@@ -84,7 +84,7 @@ Alternatively, you can execute the steps one by one:
 
         python introspect/add_question_ids_to_introspect.py
 
-6. Finally, we add the predicted relations to Introspect, and create the version in the data format of LXMERT.
+6. Finally, we add the predicted relations to Introspect.
 
         python introspect/add_rels_to_introspect.py
 

@@ -2,7 +2,7 @@ import json
 from tqdm import tqdm
 from os.path import join as jp
 
-path_introspect = '../data/vqaintrospect'
+path_introspect = './data/vqaintrospect'
 
 basename_introspect = 'VQAIntrospect_<>_withidrelv1.0.json'
 basename_introspect_output = 'VQAIntrospect_<>_no_duplicates_withidrelv1.0.json'
