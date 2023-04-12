@@ -5,8 +5,8 @@ from collections import Counter
 from os.path import join as jp
 from copy import deepcopy
 
-path_data = '../data/lxmert/data/introspect'
-path_lxmert_ans = '../data/lxmert'
+path_data = './data/lxmert/data/introspect'
+path_lxmert_ans = './data/lxmert'
 min_freq = 5
 unknown_token = 'UNK'
 

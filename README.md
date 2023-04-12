@@ -39,7 +39,7 @@ Download the data:
 - VQA-Introspect annotated pairs: [link](https://drive.google.com/file/d/1-GQzcQ-htuWSjA086JRwHlz06o_f8y8i/view?usp=sharing)
 - DME with relations: [link](https://zenodo.org/record/7777849)
 - SNLI dataset: [link](https://nlp.stanford.edu/projects/snli/snli_1.0.zip)
-- LXMERT answers: [link](https://drive.google.com/file/d/1HPzTAeh3cfjxwiPZk5oRJZ3rRwTe-Bwn/view?usp=sharing)
+- LXMERT answers and VQA data: [link](https://drive.google.com/file/d/1t6OoQ2VOnJwIC53apMh70a6rs2qRcNGE/view?usp=sharing)
 
 In this case, organize your data as follows, after unzipping:
 

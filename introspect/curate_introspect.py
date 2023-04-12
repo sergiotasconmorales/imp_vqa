@@ -14,7 +14,7 @@ from os.path import join as jp
 import os
 from answer_processing import preprocess_answer
 
-path_data = '../data'
+path_data = './data'
 path_introspect = jp(path_data, 'vqaintrospect')
 path_vqa_lxmert = jp(path_data, 'lxmert/data/vqa')
 path_output = jp(path_data, 'lxmert/data/introspect')
