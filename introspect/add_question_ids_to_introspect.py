@@ -2,7 +2,7 @@ import json
 from tqdm import tqdm
 from os.path import join as jp
 
-path_introspect = '../data/vqaintrospect'
+path_introspect = './data/vqaintrospect'
 base_filename = 'VQAIntrospect_<>v1.0.json'
 subsets = ['train', 'val']
 
