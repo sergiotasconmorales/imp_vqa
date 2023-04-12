@@ -14,9 +14,9 @@ from bert.trainer import infer
 version = 2 # version of annotated relationships dataset
 dataset_name = 'introspectnli' # name of the NLI dataset that was used last time to (re)finetune the NLP model
 for subset_to_predict in ['train', 'val']: # which (non-annotated) subset samples to predict the relationship for
-    path_model = '../models/bert_te_refinetune/{}'.format(dataset_name) # path to pre-trained weights
-    path_sentences = '../data/sentences_dataset'
-    path_rels = '../data/introspectnli_{}.0'.format(version)
+    path_model = './models/bert_te_refinetune/{}'.format(dataset_name) # path to pre-trained weights
+    path_sentences = './data/sentences_dataset'
+    path_rels = './data/introspectnli_{}.0'.format(version)
 
     # now define the rules to go from NLI labels {entailment:0, contradiction:1, neutral:2} to relationships
     dict_rel_rules = {  (0,0): '<->', 
