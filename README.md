@@ -24,9 +24,11 @@ After cloning the repo, create a new environment with Python 3.9, activate it, a
 We used the VQA-Introspect and DME-VQA datasets to test our method. You can download the final versions of both datasets from [here](https://zenodo.org/record/7777878) and [here](https://zenodo.org/record/7777849), respectively. Notice that the image features of the COCO dataset (used by VQA-Introspect) must be downloaded separately for [train](https://nlp.cs.unc.edu/data/lxmert_data/mscoco_imgfeat/train2014_obj36.zip) and [val](https://nlp.cs.unc.edu/data/lxmert_data/mscoco_imgfeat/val2014_obj36.zip). For simplicity, you can organize your data as follows, after unzipping:
 
 **📂data**\
- ┣ **📂dme_rels**\
- ┣ **📂introspect_rels**\
- ┗ **📂mscoco_imgfeat** 
+ ┣ **📂lxmert**\
+ ┃&nbsp; ┗ **📂data**\
+ ┃ &nbsp; &nbsp; &nbsp; ┣ **📂introspect** &nbsp;&nbsp;&nbsp;&nbsp;# introspect json files\
+ ┃ &nbsp; &nbsp; &nbsp; ┗ **📂dme** &nbsp;&nbsp;&nbsp;&nbsp;# dme json files\
+ ┗ **📂mscoco_imgfeat** &nbsp;&nbsp;&nbsp;&nbsp;# introspect visual features
 
 Optionally, you can follow the following steps to prepare the VQA-Introspect dataset yourself. 
 
