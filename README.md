@@ -123,7 +123,7 @@ To measure consistency for a particular set of predictions (base or ours), run t
 
 where XX should be replaced with `none` or `ours` for no consistency enhancement (i.e., $\lambda=0$) or our method, respectively.
 
-Notice that if you follow the steps described in section **Data preparation** the results may vary from the ones reported in our paper due to the different sources of variance involved in the process. Downloading the data directly is thus recommended. Training with the downloaded data and the provided config files, you should obtain an accuracy of around 75% for both cases, and a consistency difference of 2-3 percentage points between base and ours. 
+Notice that if you follow the steps described in section **Data preparation** the results may vary from the ones reported in our paper due to the different sources of variance involved in the process. Downloading the data directly is thus recommended. Training with the downloaded data and the provided config files, you should obtain an accuracy of around 75% for both cases, and a consistency difference of 2-3 percentage points between `none` and `ours`. 
 
 ---
 
