@@ -11,8 +11,8 @@ import os
 import numpy as np
 from os.path import join as jp
 from bert.dataset.mli import MNLIDataBert
-from transformers import BertForSequenceClassification
-from torch.optim import AdamW
+from transformers import BertForSequenceClassification, AdamW
+#from torch.optim import AdamW
 from bert.trainer import train
 
 # basic training params
@@ -70,7 +70,7 @@ optimizer_grouped_parameters = [
      'weight_decay_rate': 0.0}
 ]
 
-optimizer = AdamW(optimizer_grouped_parameters, lr=learning_rate)
+optimizer = AdamW(optimizer_grouped_parameters, lr=learning_rate, correct_bias=False)
 
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)

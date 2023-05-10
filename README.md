@@ -36,7 +36,7 @@ Optionally, you can follow the following steps to prepare the VQA-Introspect dat
 
 ### Data preparation
 
-⚠️ **A bug is being fixed in the data preparation. Please download the data directly with the links above.**
+🪲⚠️ **A bug is being fixed in the data preparation. Please download the data directly with the links above.**
 
 Download the data:
 - VQA-Introspect: [link](https://msropendata.com/datasets/946d5f57-4e6d-4b12-ae3e-8935d776f539)
