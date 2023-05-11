@@ -21,7 +21,7 @@ epochs = 5
 learning_rate = 2e-5
 
 # path to data
-dataset_name = 'snli' # or multinli
+dataset_name = 'multinli' # snli or multinli
 path_data = './data/{}_1.0/{}_1.0'.format(dataset_name, dataset_name)
 path_model_save = './models/bert_te/{}'.format(dataset_name)
 if not os.path.exists(path_model_save): # make sure folder exists to save final model
