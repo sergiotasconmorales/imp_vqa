@@ -51,7 +51,6 @@ for subset_to_predict in ['train', 'val']: # which (non-annotated) subset sample
     to_infer_normal = [sentences[i] for i in range(0, len(sentences)) if i not in sentence_pairs_to_ignore] # remove pairs that were already annotated
     # invert sentence1 and sentence2 so that model predicts both directions
     to_infer_inverted = [{'sentence1': e['sentence2'], 'sentence2': e['sentence1'], 'label':e['label'], 'image_id': e['image_id']} for e in to_infer_normal]
-    to_infer_inverted = [sentences[i] for i in range(0, len(sentences)) if i not in sentence_pairs_to_ignore] # remove pairs that were already annotated
 
     # create df from sentences variable
     test_df_normal = pd.DataFrame(to_infer_normal)

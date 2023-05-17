@@ -14,6 +14,7 @@ from transformers import BertForSequenceClassification
 from torch.optim import AdamW
 from bert.trainer import train
 
+nli_dataset_name = 'snli' # snli or multinli
 # basic training params
 batch_size = 16
 epochs = 5
@@ -22,7 +23,7 @@ learning_rate = 2e-5
 # path to data
 version = 2
 dataset_name = 'introspectnli'
-path_model = './models/bert_te/snli'
+path_model = './models/bert_te/' + nli_dataset_name
 path_data = './data/{}_{}.0'.format(dataset_name, str(version))
 path_model_save = './models/bert_te_refinetune/{}'.format(dataset_name)
 if not os.path.exists(path_model_save): # make sure folder exists to save final model
