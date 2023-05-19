@@ -2,16 +2,16 @@
 
 This is the official repository of the paper "Logical Implications for Visual Question Answering Consistency," (CVPR 2023).
 
+**Are you attending CVPR 2023 in Vancouver? Let's connect! This is my [LinkedIn](https://www.linkedin.com/in/sergio-tascon/) or drop me an email at sergio.tasconmorales@unibe.ch.**
+
+
 Our method encourages a VQA model to be more consistent (i.e., less self-contradictory), by including logical relations between pairs of question-answers into the training process, and using a special loss function to reduce the number of inconsistencies. 
 
 
-🔥 Repo in progress. Errors are expected 🔥
+🔥 Repo updates
 - [x] Data download and VQA-Introspect data preparation
 - [x] Training of LXMERT on VQA-Introspect
 - [x] Consistency measurement for LXMERT results
-- [ ] DME-VQA data preparation
-- [ ] Training of MVQA on DME-VQA
-- [ ] Consistency measurement for MVQA results
 
 ## Installing requirements
 After cloning the repo, create a new environment with Python 3.9, activate it, and then install the required packages by running:
@@ -35,8 +35,6 @@ Optionally, you can follow the following steps to prepare the VQA-Introspect dat
 ⚠️ **IMPORTANT: If you downloaded the data from the previous links, ignore the next section (Data preparation).**
 
 ### Data preparation
-
-🪲⚠️ **A bug is being fixed in the data preparation. Please download the data directly with the links above.**
 
 Download the data:
 - VQA-Introspect: [link](https://msropendata.com/datasets/946d5f57-4e6d-4b12-ae3e-8935d776f539)
@@ -92,7 +90,7 @@ Alternatively, you can execute the steps one by one:
 
         python introspect/add_rels_to_introspect.py
 
-7. Since VQA-Introsepct can have the same sub-question repeated several times for the same main question, we remove the duplicates. 
+7. Since VQA-Introspect can have the same sub-question repeated several times for the same main question, we remove the duplicates. 
 
         python introspect/remove_duplicates.py
 
@@ -125,7 +123,7 @@ To measure consistency for a particular set of predictions (base or ours), run t
 
 where XX should be replaced with `none` or `ours` for no consistency enhancement (i.e., $\lambda=0$) or our method, respectively.
 
-Notice that if you follow the steps described in section **Data preparation** the results may vary from the ones reported in our paper due to the different sources of variance involved in the process. Downloading the data directly is thus recommended. Training with the downloaded data and the provided config files, you should obtain an accuracy of around 75% for both cases, and a consistency difference of 2-3 percentage points between `none` and `ours`. 
+Notice that if you follow the steps described in section **Data preparation** the results may slightly vary from the ones reported in our paper due to the different sources of variance involved in the process. Downloading the data directly is thus recommended. Training with the downloaded data and the provided config files, you should obtain an accuracy of around 75% for both cases, and a consistency difference of 2-3 percentage points between `none` and `ours`. 
 
 ---
 
