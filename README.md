@@ -1,6 +1,6 @@
 # Logical Implications for Visual Question Answering Consistency
 
-This is the official repository of the paper "Logical Implications for Visual Question Answering Consistency," (CVPR 2023).
+This is the official repository of the paper "Logical Implications for Visual Question Answering Consistency," (CVPR 2023). We also have a [Project Website](https://sergiotasconmorales.github.io/conferences/cvpr2023.html).
 
 **Are you attending CVPR 2023 in Vancouver? Let's connect! This is my [LinkedIn](https://www.linkedin.com/in/sergio-tascon/) or drop me an email at sergio.tasconmorales@unibe.ch.**
 
