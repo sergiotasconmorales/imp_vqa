@@ -5,7 +5,9 @@
 # Author: 
 #   Sergio Tascon-Morales
 
-import os 
+import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
 import yaml 
 from os.path import join as jp
 import comet_ml 
@@ -18,16 +20,6 @@ from misc import printer
 from core.datasets import loaders_factory
 from core.models import model_factory
 from core.train_vault import criterions, optimizers, train_utils, looper, comet
-
-""" 
-torch.manual_seed(1234) # use same seed for reproducibility
-torch.manual_seed(1234) 
-torch.cuda.manual_seed(1234)
-random.seed(1234)
-np.random.seed(1234)
-torch.backends.cudnn.deterministic=True
-torch.backends.cudnn.benchmark=False
-"""
 
 # read config name from CLI argument --path_config
 args = io.get_config_file_name()

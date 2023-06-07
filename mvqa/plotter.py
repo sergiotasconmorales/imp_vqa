@@ -5,12 +5,14 @@
 # Author: 
 #   Sergio Tascon-Morales
 
+import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
 from os.path import join as jp
 import misc.io as io
 import torch
 import json
 import pickle
-import os
 from plot import plot_factory as pf
 from metrics import metrics 
 from misc import general 

@@ -9,7 +9,10 @@
 # IMPORTANT: All configurations are made through the yaml config file which is located in config/<dataset>/<file>.yaml. The path to this file is
 #           specified using CLI arguments, with --path_config <path_to_yaml_file> . If you don't use comet ml, set the parameter comet_ml to False
 
-import os, argparse
+import os
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+import argparse
 import yaml
 from os.path import join as jp
 import comet_ml
@@ -23,8 +26,6 @@ import misc.io as io
 from core.datasets import loaders_factory
 from core.models import model_factory
 from core.train_vault import criterions, optimizers, train_utils, looper, comet
-
-time.sleep(random.randint(0,30))
 
 # read config name from CLI argument --path_config
 args = io.get_config_file_name()
