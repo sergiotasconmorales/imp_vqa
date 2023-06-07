@@ -436,19 +436,8 @@ def train_dme_mainsub_consistrain(train_loader, model, criteria, optimizer, devi
                     else:
 
                         q2_incons = config['lambda']*consistency_loss(output, answer, relations, config)
-                        comet_exp.log_metric('q2_iter_train', q2_incons.item(), step=len(train_loader)*(epoch-1) + i+1)
-                        """ BLOCK THAT WORKS
-                        # here, compute indexes of inconsistent answers 
-                        idx_inconsistent = get_inconsistent_indexes(relations, answer)
-                        # select scores accordingly
-                        selected = torch.gather(softm(output), 1, idx_inconsistent.view(-1,1)).squeeze(-1)
-                        # now compute loss term
-                        if 'sigma' in config:
-                            q2_incons = config['lambda']*globals()[config['inc_loss']](selected, flag, sigma=config['sigma'])
-                        else:
-                            q2_incons = config['lambda']*globals()[config['inc_loss']](selected, flag)
-                        #q2_incons = config['lambda']*consistency_term.compute_loss_term(non_avg_ce, flag, device, weights=relations)
-                        """
+                        if comet_exp is not None:
+                            comet_exp.log_metric('q2_iter_train', q2_incons.item(), step=len(train_loader)*(epoch-1) + i+1)
                 else:
                     q2_incons = config['lambda']*consistency_term.compute_loss_term(non_avg_ce, flag, device)
             loss = criterion1(output, answer) + q2_incons
@@ -804,16 +793,8 @@ def validate_dme_mainsub_consistrain(val_loader, model, criteria, device, epoch,
                             q2_incons = torch.tensor(0)
                         else:
                             q2_incons = config['lambda']*consistency_loss(output, answer, relations, config)
-                            comet_exp.log_metric('q2_iter_val', q2_incons.item(), step=len(val_loader)*(epoch-1) + i+1)
-                            """WORKS
-                            idx_inconsistent = get_inconsistent_indexes(relations, answer)
-                            selected = torch.gather(softm(output), 1, idx_inconsistent.view(-1,1)).squeeze(-1)
-                            if 'sigma' in config:
-                                q2_incons = config['lambda']*globals()[config['inc_loss']](selected, flag, sigma=config['sigma'])
-                            else:
-                                q2_incons = config['lambda']*globals()[config['inc_loss']](selected, flag)
-                            #q2_incons = config['lambda']*consistency_term.compute_loss_term(non_avg_ce, flag, device, weights=relations)
-                            """
+                            if comet_exp is not None:
+                                comet_exp.log_metric('q2_iter_val', q2_incons.item(), step=len(val_loader)*(epoch-1) + i+1)
                     else:
                         q2_incons = config['lambda']*consistency_term.compute_loss_term(non_avg_ce, flag, device)
                 loss = criterion1(output, answer) + q2_incons
