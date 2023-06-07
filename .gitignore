@@ -1,5 +1,6 @@
 
 data/
 models/
+!mvqa/core/models
 
 *.pyc
