@@ -6,7 +6,7 @@ logs_dir: logs
 # dataset info
 dataset: idrid_regions_single
 path_img: ./data/dme_rels/visual
-path_qa: ./data/dme_rels_noeq/
+path_qa: ./data/dme_rels/
 path_masks: ./data/dme_rels/masks
 augment: True
 mainsub: True
