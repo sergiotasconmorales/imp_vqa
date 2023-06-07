@@ -12,9 +12,6 @@ Our method encourages a VQA model to be more consistent (i.e., less self-contrad
 - [x] Data download and VQA-Introspect data preparation
 - [x] Training of LXMERT on VQA-Introspect
 - [x] Consistency measurement for LXMERT results
-- [] Data download for DME-VQA
-- [] Training of MVQA on DME-VQA
-- [] Consistency measurment for MVQA results
 
 ## Installing requirements
 After cloning the repo, create a new environment with Python 3.9, activate it, and then install the required packages by running:
@@ -127,37 +124,6 @@ To measure consistency for a particular set of predictions (base or ours), run t
 where XX should be replaced with `none` or `ours` for no consistency enhancement (i.e., $\lambda=0$) or our method, respectively.
 
 Notice that if you follow the steps described in section **Data preparation** the results may slightly vary from the ones reported in our paper due to the different sources of variance involved in the process. Downloading the data directly is thus recommended. Training with the downloaded data and the provided config files, you should obtain an accuracy of around 75% for both cases, and a consistency difference of 2-3 percentage points between `none` and `ours`. 
-
----
-
-## Training MVQA on the DME-VQA dataset
-In order to train the model MVQA, you can run the following command
-
-        python mvqa/train.py --path_config mvqa/config/idrid_regions/single/config_XX.yaml
-
-where XX should be replaced by `none`, `squint` or `ours`.
-
----
-
-## Running inference on DME-VQA
-
-To run inference on the test set with a trained model, run
-
-        python mvqa/inference.py --path_config mvqa/config/idrid_regions/single/config_XX.yaml
-
-where XX should be replaced by `none`, `squint` or `ours`.
-
-To plot learning curves run
-
-        python mvqa/plotter.py --path_config mvqa/config/idrid_regions/single/config_XX.yaml
-
-where XX should be replaced by `none`, `squint` or `ours`.
-
----
-
-## Computing consistency for MVQA
-
-To compute the consistency for a given model for which inference was run already, use the following command
 
 ---
 
