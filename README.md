@@ -12,7 +12,7 @@ Our method encourages a VQA model to be more consistent (i.e., less self-contrad
 - [x] Data download and VQA-Introspect data preparation
 - [x] Training of LXMERT on VQA-Introspect
 - [x] Consistency measurement for LXMERT results
-- [] DME training (Might take a while because repo requires cleaning and organization)
+- [ ] DME training (Might take a while because repo requires cleaning and organization)
 
 ## Installing requirements
 After cloning the repo, create a new environment with Python 3.9, activate it, and then install the required packages by running:
