@@ -132,10 +132,11 @@ Notice that if you follow the steps described in section **Data preparation** th
 
 This work was carried out at the [AIMI Lab](https://www.artorg.unibe.ch/research/aimi/index_eng.html) of the [ARTORG Center for Biomedical Engineering Research](https://www.artorg.unibe.ch) of the [University of Bern](https://www.unibe.ch/index_eng.html). Please cite this work as:
 
-> @article{tascon2023logical,\
+> @inproceedings{tascon2023logical,\
   title={Logical Implications for Visual Question Answering Consistency},\
-  author={Tascon-Morales, Sergio and M{\'a}rquez-Neila, Pablo and Sznitman, Raphael},\
-  journal={arXiv preprint arXiv:2303.09427},\
+  author={Tascon-Morales, Sergio and M{\'a}rquez-Neila, Pablo and Sznitman,Raphael},\
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},\
+  pages={6725--6735},\
   year={2023}\
 }
 
